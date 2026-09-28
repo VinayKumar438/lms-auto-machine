@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}LMS Auto Machine{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand-group">
+                <div class="brand-mark">LMS</div>
+                <div>
+                    <h1>LMS Auto Machine</h1>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="/">Home</a>
+                <a href="/courses">Courses</a>
+                <a href="/profile">Profile</a>
+                <a href="/login">Login</a>
+            </nav>
+            <div class="header-actions">
+                <button class="ghost-btn" id="logoutBtn" style="display: none;">Logout</button>
+                <button class="primary-btn" id="loginPromptBtn">Get Started</button>
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="chatbotWidget" class="chatbot-widget">
+        <button id="chatbotToggle" class="chatbot-toggle">AI Chat</button>
+        <div id="chatbotPanel" class="chatbot-panel hidden">
+            <div class="chatbot-header">
+                <span>LMS Assistant</span>
+                <button id="chatbotClose">×</button>
+            </div>
+            <div id="chatbotMessages" class="chatbot-messages"></div>
+            <div class="chatbot-input-wrap">
+                <input type="text" id="chatbotInput" placeholder="Ask about courses, progress..." />
+                <button id="chatbotSend">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

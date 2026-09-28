@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Student Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">Student Panel</div>
+        <nav>
+            <a href="/student" class="active">Dashboard</a>
+            <a href="/courses">Courses</a>
+            <a href="/profile">Profile</a>
+            <a href="#">Assignments</a>
+            <a href="#">Certificates</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+        <section class="dashboard-header">
+            <div>
+                <span class="eyebrow">Dashboard</span>
+                <h2>Welcome back, <span id="studentName"></span></h2>
+            </div>
+        </section>
+
+        <section class="stats-grid" id="studentStats"></section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h3>My Courses</h3>
+            </div>
+            <div id="studentCourses" class="course-list"></div>
+        </section>
+    </main>
+</div>
+{% endblock %}

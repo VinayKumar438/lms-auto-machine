@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Profile{% endblock %}
+{% block content %}
+<section class="profile-page">
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="avatar">U</div>
+            <div>
+                <span class="eyebrow">Profile</span>
+                <h2 id="profileName">User</h2>
+            </div>
+        </div>
+
+        <div class="profile-grid">
+            <div class="profile-box">
+                <label>Email</label>
+                <p id="profileEmail">-</p>
+            </div>
+            <div class="profile-box">
+                <label>Role</label>
+                <p id="profileRole">-</p>
+            </div>
+            <div class="profile-box">
+                <label>Courses Enrolled</label>
+                <p id="profileCourses">0</p>
+            </div>
+            <div class="profile-box">
+                <label>Certificates Earned</label>
+                <p id="profileCertificates">0</p>
+            </div>
+        </div>
+
+        <div class="bio-box">
+            <h3>Bio</h3>
+            <p id="profileBio">No bio yet.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

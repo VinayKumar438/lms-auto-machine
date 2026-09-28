@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Login{% endblock %}
+{% block content %}
+<section class="auth-page">
+    <div class="auth-card">
+        <div class="auth-header">
+            <span class="eyebrow">Welcome</span>
+            <h2>Login or Create Account</h2>
+        </div>
+
+        <div class="auth-toggle">
+            <button class="toggle-btn active" data-mode="login">Login</button>
+            <button class="toggle-btn" data-mode="register">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active-form">
+            <div class="field">
+                <label>Email</label>
+                <input type="email" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="primary-btn full-width">Login</button>
+        </form>
+
+        <form id="registerForm" class="auth-form">
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" id="registerName" placeholder="Your name" required>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" id="registerEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" id="registerPassword" placeholder="Create password" required>
+            </div>
+            <div class="field">
+                <label>Role</label>
+                <select id="registerRole">
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <button type="submit" class="primary-btn full-width">Register</button>
+        </form>
+
+        <div class="demo-box">
+            <strong>Demo Accounts</strong>
+            <p>Admin: admin@lms.com / admin123</p>
+            <p>Teacher: teacher@lms.com / teacher123</p>
+            <p>Student: student@lms.com / student123</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

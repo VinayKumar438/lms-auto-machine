@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Home{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-copy">
+        <span class="eyebrow">Modern Learning Platform</span>
+        <h2>Learn faster with a smart, structured LMS</h2>
+        <p>Enroll in courses, track progress, complete assignments, and get certified with a professional learning experience designed for students, teachers, and admins.</p>
+        <div class="cta-row">
+            <button class="primary-btn" onclick="location.href='/courses'">Explore Courses</button>
+            <button class="secondary-btn" onclick="location.href='/login'">Join Now</button>
+        </div>
+        <ul class="hero-metrics">
+            <li><strong>12k+</strong><span>Students</span></li>
+            <li><strong>240+</strong><span>Courses</span></li>
+            <li><strong>92%</strong><span>Completion</span></li>
+        </ul>
+    </div>
+    <div class="hero-visual">
+        <div class="dashboard-card">
+            <div class="card-top">
+                <span class="card-badge">Live</span>
+                <span>Learning Progress</span>
+            </div>
+            <div class="progress-ring">
+                <div class="ring-inner">74%</div>
+            </div>
+            <div class="mini-stat">
+                <span>Python Bootcamp</span>
+                <strong>12 of 18 modules</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="section-heading">
+        <span class="eyebrow">Why choose us</span>
+        <h3>Everything your team needs to learn and teach</h3>
+    </div>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📚</div>
+            <h4>Course Library</h4>
+            <p>Browse a wide range of practical and modern courses.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">✅</div>
+            <h4>Assignments & Quizzes</h4>
+            <p>Assess knowledge with structured evaluation tools.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Progress Tracking</h4>
+            <p>Monitor performance through interactive dashboards and analytics.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h4>AI Support</h4>
+            <p>Get instant guidance for lessons, tasks, and navigation.</p>
+        </div>
+    </div>
+</section>
+
+<section class="popular-courses">
+    <div class="section-heading">
+        <span class="eyebrow">Popular courses</span>
+        <h3>Top programs for learners</h3>
+    </div>
+    <div class="course-grid" id="homeCourseGrid"></div>
+</section>
+{% endblock %}

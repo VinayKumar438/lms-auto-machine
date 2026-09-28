@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Courses{% endblock %}
+{% block content %}
+<section class="catalog-page">
+    <div class="page-header">
+        <div>
+            <span class="eyebrow">Course Library</span>
+            <h2>Explore learning paths</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" id="courseSearch" placeholder="Search courses, topics, or keywords..." />
+        </div>
+    </div>
+    <div id="courseCatalogGrid" class="course-grid large-grid"></div>
+</section>
+{% endblock %}

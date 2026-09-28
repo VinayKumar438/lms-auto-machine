@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Admin Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">Admin Panel</div>
+        <nav>
+            <a href="/admin" class="active">Overview</a>
+            <a href="#">Users</a>
+            <a href="#">Courses</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+        <section class="dashboard-header">
+            <div>
+                <span class="eyebrow">Admin Dashboard</span>
+                <h2>Platform Overview</h2>
+            </div>
+        </section>
+        <section class="stats-grid" id="adminStats"></section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h3>All Courses</h3>
+            </div>
+            <div id="adminCourses" class="course-list"></div>
+        </section>
+    </main>
+</div>
+{% endblock %}

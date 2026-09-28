@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}LMS Auto Machine | Teacher Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">Teacher Panel</div>
+        <nav>
+            <a href="/teacher" class="active">Overview</a>
+            <a href="/courses">Courses</a>
+            <a href="#">Students</a>
+            <a href="#">Assignments</a>
+            <a href="#">Quizzes</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+        <section class="dashboard-header">
+            <div>
+                <span class="eyebrow">Teacher Dashboard</span>
+                <h2>Hello, <span id="teacherName"></span></h2>
+            </div>
+        </section>
+        <section class="stats-grid" id="teacherStats"></section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h3>Managed Courses</h3>
+            </div>
+            <div id="teacherCourses" class="course-list"></div>
+        </section>
+    </main>
+</div>
+{% endblock %}
