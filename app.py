@@ -8,7 +8,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 app.secret_key = 'lms-auto-machine-secret-key'
-DB_PATH = "/tmp/lms.db"
+DB_PATH = os.path.join("/tmp", "lms.db")
 
 
 def get_db_connection():
